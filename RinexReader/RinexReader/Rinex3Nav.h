@@ -136,9 +136,9 @@ public:
 	// Attributes
 
 	// * Navigation data structure mapped to PRN for ease of use
-	std::map<int, std::vector<Rinex3Nav::DataGPS>> _navGPS;
-	std::map<int, std::vector<Rinex3Nav::DataGLO>> _navGLO;
-	std::map<int, std::vector<Rinex3Nav::DataGAL>> _navGAL;
+	std::map<int, std::vector<Rinex3Nav::DataGPS> > _navGPS;
+	std::map<int, std::vector<Rinex3Nav::DataGLO> > _navGLO;
+	std::map<int, std::vector<Rinex3Nav::DataGAL> > _navGAL;
 
 	// * Header information
 	HeaderGPS _headerGPS;

@@ -40,9 +40,9 @@ public:
 		double gpsTime;
 		int nSats;
 		std::vector<int> sats;
-		std::map<int, std::vector<double>> observations;
-		std::map<int, std::vector<int>> LLI; // LLI Flag
-		std::map<int, std::vector<int>> SS; // Signal Strength
+		std::map<int, std::vector<double> > observations;
+		std::map<int, std::vector<int> > LLI; // LLI Flag
+		std::map<int, std::vector<int> > SS; // Signal Strength
 	}; 
 
 	// Attributes
@@ -50,14 +50,14 @@ public:
 	ObsEpochInfo _obsDataGPS;
 
 	std::vector<std::string> _obsTypesGPS;
-	std::map<int, std::vector<double>> _obsGPS;
+	std::map<int, std::vector<double> > _obsGPS;
 
 	// Functions
 	void clearObs();
 	void clearHeader();
 	void obsHeader(std::ifstream& infile);
 	void obsEpoch(std::ifstream& infile, std::ofstream& logfile, int nObsTypes);
-	std::map<int, double> Rinex2Obs::specificObsMapper(std::map<int, std::vector<double>> obsGPS, std::vector<std::string> obsTypes, std::string specificObs);
+	std::map<int, double> Rinex2Obs::specificObsMapper(std::map<int, std::vector<double> > obsGPS, std::vector<std::string> obsTypes, std::string specificObs);
 
 private:
 

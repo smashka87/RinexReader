@@ -205,7 +205,7 @@ void Rinex2Nav::readNav(std::ifstream& infile) {
 			if (mapGPS.find(GPS.PRN) == mapGPS.end()) {
 				// not found, therefore insert PRN and corresponding value
 				vector<DataGPS> mapNavVector; mapNavVector.push_back(GPS);
-				mapGPS.insert(pair<int, vector<DataGPS>>(GPS.PRN, mapNavVector));
+				mapGPS.insert(pair<int, vector<DataGPS> >(GPS.PRN, mapNavVector));
 			}
 			else {
 				// found, therefore add to existing PRN
